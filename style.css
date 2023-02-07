@@ -1,0 +1,11 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(96, 2px);
+    grid-template-rows: repeat(64, 2px);
+}
+.p-black{
+    background-color: black;
+}
+.p-white{
+    background-color: white;
+}
