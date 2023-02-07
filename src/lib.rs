@@ -1,6 +1,5 @@
 mod utils;
 
-use chrono::Duration;
 use js_sys::{Uint8Array};
 use wasm_bindgen::{prelude::*, JsCast};
 use wasm_bindgen_futures::JsFuture;
@@ -44,7 +43,7 @@ pub async fn play() {
     const HEIGHT: i32 = 64;
     const BPF: usize = (WIDTH * HEIGHT) as usize;
 
-    let request = Request::new_with_str("/data/frames.bin").expect("error");
+    let request = Request::new_with_str("data/frames.bin").expect("error");
     let resp_value = JsFuture::from(window.fetch_with_request(&request)).await.expect("error");
     assert!(resp_value.is_instance_of::<Response>());
     let resp: Response = resp_value.dyn_into().unwrap();
@@ -53,7 +52,7 @@ pub async fn play() {
     let video: Vec<u8> = array.to_vec();
     console_log!("loaded");
 
-    let audio = HtmlAudioElement::new_with_src("/data/badapple.mp3").expect("error loading audio");
+    let audio = HtmlAudioElement::new_with_src("data/badapple.mp3").expect("error loading audio");
 
     // Manufacture the element we're gonna append
     let grid = document.create_element("div").expect("error");
