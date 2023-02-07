@@ -14,4 +14,4 @@ Needs `wasm-pack`.
 wasm-pack build --target web
 ```
 
-Serve `index.html`, `data/` and `pkg/`.
+Serve `index.html`, `style.css`, `data/` and `pkg/`.
