@@ -1,0 +1,15 @@
+{
+  "name": "badapple-wasm",
+  "collaborators": [
+    "xoko14 <xoquinperezb@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "badapple_wasm_bg.wasm",
+    "badapple_wasm.js",
+    "badapple_wasm.d.ts"
+  ],
+  "module": "badapple_wasm.js",
+  "types": "badapple_wasm.d.ts",
+  "sideEffects": false
+}
